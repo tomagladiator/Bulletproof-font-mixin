@@ -1,6 +1,6 @@
 //	Fallback fs
-    $letter-spacing:    			20;		// Photoshop unit
-	$line-height:					1.618;	// Golden ratio
+    	$letter-spacing:    			20;	// Photoshop unit
+	$line-height:				1.618;	// Golden ratio
 	@mixin fs($value) {
 		$pxValues: '';
 		$remValues: '';
@@ -16,9 +16,7 @@
 
 		// REM
 		$remValues: #{$remValues + $value}rem;
-		// suivant un letter spacing standard de "20"
 		$remValuesLetterSpacing: #{( $letter-spacing * $value ) / 1000}rem;
-		// suivant une line-height ratio de 1.618
 		$remValuesLineHeight: #{( $value  ) * $line-height}rem;
 
 		line-height: $pxValuesLineHeight;
