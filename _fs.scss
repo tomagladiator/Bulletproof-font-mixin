@@ -2,27 +2,15 @@
     	$letter-spacing:    			20;	// Photoshop unit
 	$line-height:				1.618;	// Golden ratio
 	@mixin fs($value) {
-		$pxValues: '';
-		$remValues: '';
-		$pxValuesLetterSpacing: '';
-		$remValuesLetterSpacing: '';
-		$pxValuesLineHeight: '';
-		$remValuesLineHeight: '';
+		$Values: '';
+		$ValuesLetterSpacing: '';
+		$ValuesLineHeight: '';
 
-		// PX
-		$pxValues: #{$pxValues + $value*10}px;
-		$pxValuesLetterSpacing: #{( $letter-spacing * ($value * 10) ) / 1000}px;
-		$pxValuesLineHeight: #{( ($value * 10) ) * $line-height}px;
+		$Values: #{$Values + $value}px;
+		$ValuesLetterSpacing: #{( $letter-spacing * ($value) ) / 1000}px;
+		$ValuesLineHeight: #{( ($value) ) * $line-height}px;
 
-		// REM
-		$remValues: #{$remValues + $value}rem;
-		$remValuesLetterSpacing: #{( $letter-spacing * $value ) / 1000}rem;
-		$remValuesLineHeight: #{( $value  ) * $line-height}rem;
-
-		line-height: $pxValuesLineHeight;
-		line-height: $remValuesLineHeight;
-		letter-spacing: $pxValuesLetterSpacing;
-		letter-spacing: $remValuesLetterSpacing;
-		font-size: $pxValues;
-		font-size: $remValues;
+		line-height: $ValuesLineHeight;
+		letter-spacing: $ValuesLetterSpacing;
+		font-size: $Values;
 	}
